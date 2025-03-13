@@ -1,0 +1,23 @@
+{
+  "name": "number-flipper",
+  "version": "1.0.0",
+  "description": "Submission for the 3/11/25 Sloth Bytes Weekly Challenge",
+  "homepage": "https://github.com/Repr-dev/Number-Flipper#readme",
+  "bugs": {
+    "url": "https://github.com/Repr-dev/Number-Flipper/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Repr-dev/Number-Flipper.git"
+  },
+  "license": "ISC",
+  "author": "Repr",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.js"
+  },
+  "dependencies": {
+    "prompt-sync": "^4.2.0"
+  }
+}
