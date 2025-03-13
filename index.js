@@ -2,51 +2,37 @@ const prompt = require("prompt-sync")();
 
 // NodeJS experience
 console.log("\nWelcome!");
-while(true) {
+console.log("Type \"q\" to quit at any time.\n");
+
+while (true) {
     let res = prompt("Number to flip > ");
-    console.log(`\nn${turnCalc(res)}\n\n`);
+
+    if(res === "q") break;
+
+    console.log(`${turnCalc(res)}\n`);
 }
 
-// Flip function
+/**
+ * 
+ * @param {Number, String} num - input value (string is recommended so that numbers with leading zeros can be inputted)
+ * @returns {String} flipped number
+ *  
+ */
 function turnCalc(num) {
-    let reversed = Number(String(num).split("").reverse().join(""));
-    reversed.replace(/\./g, "");
+    // Finds the stringified input, but reversed
+    let reversed = String(num).split("").reverse().join("");
 
-    for (let i = 0; i < reversed.length; i++) {
-        let replacement = "";
-        switch (reversed[i]) {
-            case "1":
-                replacement = "I";
-                break;
-            case "2":
-                replacement = "Z";
-                break;
-            case "3":
-                replacement = "E";
-                break;
-            case "4":
-                replacement = "H";
-                break;
-            case "5":
-                replacement = "S";
-                break;
-            case "6":
-                replacement = "G";
-                break;
-            case "7":
-                replacement = "L";
-                break;
-            case "8":
-                replacement = "B";
-                break;
-            case "0":
-                replacement = "0";
-                break;
-        }
-
-        reversed[i] = replacement;
-        if(replacement === "") i++;
-    }
+    // Does the replacements, making use of regular expressions that have the global (g) modifier
+    reversed = reversed
+        .replace(/1/g, "I")
+        .replace(/2/g, "Z")
+        .replace(/3/g, "E")
+        .replace(/4/g, "H")
+        .replace(/5/g, "S")
+        .replace(/6/g, "G")
+        .replace(/7/g, "L")
+        .replace(/8/g, "B")
+        .replace(/0/g, "O");
 
     return reversed;
 }
