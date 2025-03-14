@@ -26,7 +26,7 @@ function turnCalc(num) {
     // Finds the stringified input, but reversed
     let reversed = String(num).split("").reverse().join("");
 
-    // Does the replacements, making use of regular expressions that have the global (g) modifier
+    // Does the replacements
     reversed = reversed
         .replace(/1/g, "I")
         .replace(/2/g, "Z")
