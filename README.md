@@ -1,5 +1,5 @@
 # Number Flipper
-A JavaScript console app that turns integers into strings based on their appearance on an upside down seven-segment display. For example, an input of `4506` would result in an output of `GOSH`:
+A JavaScript console app that turns integers into strings based on their appearance on an upside down seven-segment display. For example, an input of `4506` would result in an output of `"GOSH"`:
 
 ![4506 on a seven-segment display](4506.png) &nbsp;&nbsp; ![GOSH (4506 flipped upside down) on a seven-segment display](GOSH.png)
 
